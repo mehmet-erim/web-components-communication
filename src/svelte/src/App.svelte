@@ -1,5 +1,9 @@
 <script>
+  export let count = "tasds";
+  let counter;
+  store.subscribe(() => (counter = store.getState()));
 
+  setInterval(() => console.warn(count), 1000);
 </script>
 
 <style>
@@ -15,5 +19,7 @@ We also have to include the "customElement: true" compiler setting in rollup con
 <div id="svelte-counter">
   Svelte
   <br />
-  0
+  {counter}
+  <br />
+  {count}
 </div>

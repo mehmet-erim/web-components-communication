@@ -1,10 +1,17 @@
-function component() {
-  const element = document.createElement('div');
+import { counterStore } from './stores';
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+counterStore.dispatch({ type: 'INCREMENT' });
 
-  return element;
-}
+counterStore.dispatch({ type: 'INCREMENT' });
 
-document.body.appendChild(component());
+counterStore.dispatch({ type: 'DECREMENT' });
+setInterval(() => {
+  counterStore.dispatch({ type: 'INCREMENT' });
+}, 1000);
+
+window.store = counterStore;
+
+setTimeout(() => {
+  const svelteElement = document.body.querySelector('svelte-counter-element');
+  svelteElement.setAttribute('count', counterStore);
+}, 1000);
