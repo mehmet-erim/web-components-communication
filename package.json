@@ -1,0 +1,25 @@
+{
+  "name": "web-components-communication",
+  "version": "0.0.1",
+  "description": "Communication between web components communication with Redux",
+  "private": true,
+  "scripts": {
+    "build": "webpack -p",
+    "build:watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehmet-erim/web-components-communication.git"
+  },
+  "author": "Mehmet Erim @mehmet-erim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mehmet-erim/web-components-communication/issues"
+  },
+  "homepage": "https://github.com/mehmet-erim/web-components-communication#readme",
+  "dependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
